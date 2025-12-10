@@ -1,0 +1,11 @@
+A4 — First operational notes (Day 1)
+
+- Created repository Payloab_Fx
+- Wrote README.md
+- First commit completed
+- Learned basic GitHub workflow (Code, Commit)
+- Understood the concept of commit messages
+
+Notes:
+Beginning of Phase 1 — activation.
+
