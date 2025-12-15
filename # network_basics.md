@@ -13,3 +13,6 @@
 ## NAT - Network Address Translation,  allows internal/private IPs to communicate on the internet using one public IP(WAN)
 
 ## Ports Logical endpoint representing services (ex: 80=http)
+
+
+test editar carpeta network_basics 
