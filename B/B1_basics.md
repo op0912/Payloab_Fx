@@ -145,7 +145,7 @@ Important:
 - often same device at home
 - can be different in enterprise networks
 
-### Public IP & DNS (Real Debugging)
+### Public IP & DNS 
 
 ### Step 1 — Checking local network
 
