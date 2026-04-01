@@ -156,22 +156,6 @@ Server responds (JSON):
 
 ---
 
-### Key Insight
-
-- JSON = data (transport)
-- HTML = display (visual)
-
----
-
-### Flow
-
-1. client requests data (API)
-2. server returns JSON
-3. JavaScript processes it
-4. page updates dynamically
-
----
-
 ## Important Insight
 
 When loading a website:
