@@ -194,7 +194,7 @@ It loads:
 - data (API)
 
 → all through multiple TCP connections
-
+-- all web components (HTML, CSS, JS, API) are part of a larger web flow (see preview section)
 ---
 
 ### Key Insight
@@ -204,11 +204,11 @@ It loads:
 
 ---
 
-### Flow
+### API Flow (Dynamic Data)
 
 1. client requests data (API)
 2. server returns JSON
-3. JavaScript processes it
+3. JavaScript processes the response
 4. page updates dynamically
 
 ---
@@ -553,6 +553,24 @@ RunAsPPL = 1
   - service
   - exposure
   - behavior
+
+---
+
+## Preview — Full Web Flow (Introduced in B3)
+
+High-level overview of what happens when accessing a website:
+
+1. DNS resolves domain to IP
+2. TCP connection is established
+3. HTTPS/TLS secures the connection
+4. browser sends HTTP request
+5. server returns HTML
+6. browser requests CSS / JS / images
+7. JavaScript may trigger API requests
+8. page renders
+
+Note:
+- This flow will be fully explained in B3 (services layer)
 
 ---
 
