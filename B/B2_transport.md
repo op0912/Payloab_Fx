@@ -263,11 +263,92 @@ UDP:
 
 ---
 
-## TCP Handshake
+ ## TCP Handshake (3-Way Handshake)
 
-1. SYN → client initiates  
-2. SYN-ACK → server responds  
-3. ACK → connection established  
+### Objective
+Establish a reliable (stateful) connection between a client and a server.
+
+---
+
+### Step 1 — SYN (Client → Server)
+
+The client initiates the connection:
+
+- Sends a SYN packet
+- Includes an **Initial Sequence Number (ISN)**
+
+👉 Purpose:
+- Request connection establishment
+- Start sequence number synchronization
+
+---
+
+### Step 2 — SYN-ACK (Server → Client)
+
+The server responds:
+
+- Accepts the connection
+- Sends:
+  - a **SYN** (its own sequence number)
+  - an **ACK** (acknowledges client’s SYN)
+
+Purpose:
+
+- Confirm the client’s request
+- Synchronize both sides
+
+---
+
+### Step 3 — ACK (Client → Server)
+
+The client finalizes the process:
+
+- Sends an ACK
+- Confirms receipt of the server’s SYN
+
+Result:
+
+- Connection established
+- Bidirectional communication is ready
+
+---
+
+###  What the handshake actually establishes
+
+- A **stateful connection**
+- **Synchronized sequence numbers**
+- A reliable communication channel enabling:
+  - retransmission
+  - ordered delivery
+  - flow control
+
+---
+
+###  Important
+
+The TCP handshake:
+- does NOT handle authentication
+- does NOT include application data (HTTP, login, etc.)
+
+- It strictly establishes the network connection.
+
+---
+
+###  Quick Summary
+
+Client        → SYN →        Server  
+Client        ← SYN-ACK ←    Server  
+Client        → ACK →        Server  
+
+ Connection established
+
+---
+
+###  Why it matters (Security Perspective)
+
+- Enables detection of attacks (e.g., SYN flood)
+- Used by stateful firewalls
+- Foundation of most TCP-based protocols (HTTP, HTTPS, SSH, etc.)
 
 ---
 
