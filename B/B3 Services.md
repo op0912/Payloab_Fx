@@ -395,6 +395,125 @@ Observed:
 
 ---
 
+## Network Troubleshooting — Proper Diagnostic Approach
+
+### Objective
+Identify and isolate network issues using a structured and logical method.
+
+---
+
+## Core Principle
+
+Always move from:
+Local → DNS → Connectivity → Path
+
+Do not guess. Validate each layer step by step.
+
+---
+
+## Step 1 — Check Local Configuration
+
+ipconfig /all
+
+Verify:
+- IP address (valid private range)
+- Default gateway
+- DNS server
+- DHCP status
+
+If this is broken → issue is local.
+
+---
+
+## Step 2 — Test DNS Resolution
+
+nslookup google.com
+
+What it tells you:
+- If DNS is working
+- Which IP is returned
+
+If it fails:
+→ DNS issue (server, config, or resolution path)
+
+---
+
+## Step 3 — Test Basic Connectivity (No DNS)
+
+ping 8.8.8.8
+
+What it tells you:
+- If your machine can reach the Internet
+- If ICMP is allowed
+
+If it fails:
+→ Network issue (local, gateway, firewall, ISP)
+
+---
+
+## Step 4 — Test Target Connectivity
+
+ping <resolved_IP>
+
+What it tells you:
+- If the target responds to ICMP
+
+Note:
+Failure does not always mean unreachable (ICMP may be blocked)
+
+---
+
+## Step 5 — Trace the Path
+
+tracert <IP>
+
+What it tells you:
+- Where the connection fails
+- Network path (hops)
+
+Useful for:
+- ISP issues
+- routing problems
+
+---
+
+## Example Scenario
+
+Problem:
+ping google.com → fails
+
+Diagnostic:
+
+1. ipconfig /all → verify local config  
+2. nslookup google.com → DNS OK  
+3. ping 8.8.8.8 → works  
+4. ping google IP → fails  
+
+Conclusion:
+Likely ICMP blocked by target or firewall
+
+---
+
+## Common Mistakes
+
+- Testing with domain names when DNS is broken  
+- Assuming "ping failed" = host unreachable  
+- Skipping local configuration checks  
+- Mixing DNS issues with network issues  
+
+---
+
+## Key Insight
+
+Different tools test different layers:
+
+nslookup → DNS  
+ping → ICMP / reachability  
+tracert → routing path  
+ipconfig → local configuration  
+
+Use them intentionally.
+
 ##  Final Observations
 
 - DNS works independently of connectivity  
