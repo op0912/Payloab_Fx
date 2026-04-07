@@ -277,7 +277,8 @@ The client initiates the connection:
 - Sends a SYN packet
 - Includes an **Initial Sequence Number (ISN)**
 
-👉 Purpose:
+  Purpose:
+
 - Request connection establishment
 - Start sequence number synchronization
 
