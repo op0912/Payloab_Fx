@@ -106,7 +106,113 @@ This section will be removed once all ports are documented.
 - 
 
 ### Observation
+
+---
+
+## File Transfer
+
+Ports in this section are related to file transfer and file sharing between systems.
+
+They allow:
+- uploading and downloading files
+- sharing directories over the network
+- accessing remote file systems
+
+---
+
+## Port : 20/21  
+## Name : FTP (FILE TRANSFER PROTOCOL)
+
+### Definition
+- FTP (File Transfer Protocol) is used to transfer files between a client and a server.
+- It allows uploading (sending files) and downloading (receiving files).
+- The protocol is split into two channels:
+  - Port 21 is used for control (login, commands, session management)
+  - Port 20 is used for data transfer
+- Session management means maintaining the connection while multiple commands and transfers are executed.
+
+### How it communicates
+- Uses TCP for both 20/21
+- Establishes a control connection on port 21
+- Uses a separate connection for data transfer (port 20 or dynamic ports in passive mode)
+
+### How it can be attacked
+- Brute force: attacker tries many username/password combinations until one works
+- Anonymous login: attacker logs in without credentials if the server allows it
+- Credential sniffing: attacker captures username and password because FTP is not encrypted
+- Unauthorized file upload: attacker uploads malicious files to the server
+- Misconfigured permissions: attacker accesses or modifies files they should not have access to
+
+### Observation
+- No FTP service detected on port 21 using netstat
+- Only local connections observed (127.0.0.1)
+- Test-NetConnection failed when using an invalid IP
+- No FTP response when attempting to connect (ftp command)
+- No FTP observed locally
+
+### Notes
+- Port 21 is the main entry point for FTP
+- FTP requires a running service to respond
+- No service on port 21 means FTP is not available
+- FTP is not secure (credentials are sent in clear text)
+
+---
+
+## Port : 69  
+## Name : TFTP (TRIVIAL FILE TRANSFER PROTOCOL)
+
+### Definition
+- 
+
+### How it communicates
+- 
+
+### How it can be attacked
+- 
+
+### Observation
 - 
 
 ### Notes
 - 
+
+---
+
+## Port : 2049  
+## Name : NFS (NETWORK FILE SYSTEM)
+
+### Definition
+- 
+
+### How it communicates
+- 
+
+### How it can be attacked
+- 
+
+### Observation
+- 
+
+### Notes
+- 
+
+
+---
+
+## Port : 445
+## Name : SMB (SERVER MESSAGE BLOCK) 
+
+### Definition
+- 
+
+### How it communicates
+- 
+
+### How it can be attacked
+- 
+
+### Observation
+-
+
+### Notes
+-
