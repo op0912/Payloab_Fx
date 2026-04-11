@@ -188,19 +188,28 @@ They allow:
 ## Name : NFS (NETWORK FILE SYSTEM)
 
 ### Definition
-- 
+- Used to access and work on files stored on a remote system
+- Allows files to be used as if they were local
+- Used mainly on Linux systems
 
 ### How it communicates
-- 
+- Uses TCP (port 2049)
+- Client sends requests to access files on the server
+- Server responds with file data
+- Allows reading and writing files over the network
 
 ### How it can be attacked
-- 
+- Unauthorized access: attacker can read files if access is not properly restricted
+- File modification: attacker can modify existing files on the server
+- File upload: attacker can add malicious files to the system
+- Trust abuse: NFS is often used in trusted networks, making it easier to exploit if access is gained
 
 ### Observation
 - 
 
 ### Notes
-- 
+- Modifying or adding files through NFS affects the remote server, not the local machine
+- However, if a file is executed, it runs on the local system and can affect it
 
 
 ---
