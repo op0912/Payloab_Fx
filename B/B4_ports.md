@@ -242,3 +242,101 @@ They allow:
 - Widely used in most networks, making it a common target
 - Requires authentication (username and password)
 - Equivalent to NFS in Linux systems
+
+## Remote Access
+
+Ports in this section are used to remotely access and control systems.
+
+They allow:
+- remote command execution
+- system administration
+- remote desktop access
+
+
+---
+
+## Port : 22
+## Name : SSH (SECURE SHELL)
+
+### Definition
+- 
+
+### How it communicates
+- 
+
+### How it can be attacked
+- 
+
+### Observation
+-
+
+---
+
+## Port : 23
+## Name : TELNET
+
+### Definition
+- 
+
+### How it communicates
+- 
+
+### How it can be attacked
+- 
+
+### Observation
+-
+
+---
+
+## Port : 3389
+## Name : RDP (REMOTE DESKTOP PROTOCOL)
+
+### Definition
+- 
+
+### How it communicates
+- 
+
+### How it can be attacked
+- 
+
+### Observation
+-
+
+---
+
+## Port : 5900
+## Name : VNC (VIRTUAL NETWORK COMPUTING)
+
+### Definition
+- 
+
+### How it communicates
+- 
+
+### How it can be attacked
+- 
+
+### Observation
+-
+
+---
+
+
+## Port : 5985/5986
+## Name : WinRM (WINDOWS REMOTE MANAGEMENT)
+
+### Definition
+- 
+
+### How it communicates
+- 
+
+### How it can be attacked
+- 
+
+### Observation
+-
+
+---
