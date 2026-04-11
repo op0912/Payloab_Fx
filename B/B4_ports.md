@@ -218,16 +218,27 @@ They allow:
 ## Name : SMB (SERVER MESSAGE BLOCK) 
 
 ### Definition
-- 
+- Protocol used to share files and network resources between systems
+- Allows accessing and modifying files on a remote system 
 
 ### How it communicates
-- 
+- Uses TCP (port 445)
+- Client connects to a remote system to access shared resources
+- Server responds and allows access based on permissions
+- Allows reading and writing files over the network 
 
 ### How it can be attacked
-- 
+- Credential attacks: attacker can try to guess or reuse login credentials
+- Unauthorized access: attacker can access shared folders if permissions are weak
+- File access: attacker can read or copy sensitive files
+- File modification: attacker can modify or delete files
+- Malware execution: malicious files can be placed and executed on a system
 
 ### Observation
 -
 
 ### Notes
--
+- Mainly used in Windows environments
+- Widely used in most networks, making it a common target
+- Requires authentication (username and password)
+- Equivalent to NFS in Linux systems
