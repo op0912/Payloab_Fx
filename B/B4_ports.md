@@ -243,6 +243,8 @@ They allow:
 - Requires authentication (username and password)
 - Equivalent to NFS in Linux systems
 
+---
+
 ## Remote Access
 
 Ports in this section are used to remotely access and control systems.
