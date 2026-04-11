@@ -162,13 +162,19 @@ They allow:
 ## Name : TFTP (TRIVIAL FILE TRANSFER PROTOCOL)
 
 ### Definition
-- 
+- Used to transfer files over a network
+- Simpler version of FTP with no authentication
+
 
 ### How it communicates
-- 
+- Uses UDP (port 69)
+- No connection setup (connectionless)
+- No login or authentication
 
 ### How it can be attacked
-- 
+- No authentication: anyone can access files if the service is exposed
+- File download: attacker can retrieve sensitive files
+- File upload: attacker can upload malicious files
 
 ### Observation
 - 
