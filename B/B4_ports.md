@@ -16,6 +16,175 @@ In this section, **about 40 key ports will be analyzed in depth** to build a cle
 
 ---
 
+# Fundamentals — Port / Service / Protocol / Function
+
+---
+
+## Core Concept
+
+A port exposes a service  
+A service uses a protocol  
+A protocol fulfills a function
+
+---
+
+## Definitions
+
+### Port
+A port is a network entry point on a machine.
+
+Role:
+- Directs incoming traffic to the correct service
+- Identifies a specific application
+
+Key idea:
+Port = network entry point
+
+Examples:
+- 21 → FTP  
+- 443 → HTTPS  
+- 445 → SMB  
+
+---
+
+### Service
+A service is a program running on a machine that listens on a port.
+
+Role:
+- Handles incoming connections
+- Provides a specific functionality (web, file sharing, etc.)
+
+Key idea:
+Service = program listening on a port
+
+Examples:
+- FTP server  
+- Web server (Apache, Nginx)  
+- SMB service  
+
+---
+
+### Protocol
+A protocol is a set of rules that define how machines communicate.
+
+Role:
+- Standardizes communication
+- Ensures systems understand each other
+
+Key idea:
+Protocol = communication rules / language
+
+Examples:
+- FTP → file transfer  
+- HTTP/HTTPS → web communication  
+- DNS → name resolution  
+
+---
+
+### Function
+The function is the actual purpose of the protocol.
+
+Role:
+- Solves a specific need
+
+Key idea:
+Function = what it is used for
+
+Examples:
+- FTP → send/receive files  
+- DNS → resolve domain names to IP  
+- SMB → share files  
+
+---
+
+## Full Chain Example
+
+Port 21 open  
+→ FTP service running  
+→ FTP protocol used  
+→ Function = file transfer  
+
+---
+
+## Why These Services Were Created
+
+### Historical Context
+
+Originally:
+- closed networks  
+- trusted users  
+- little to no attacks  
+
+Priority = functionality  
+NOT = security  
+
+---
+
+### Purpose of Common Services
+
+- FTP → transfer files between machines  
+- TFTP → simple and fast file transfer (internal use)  
+- NFS → share files across Linux systems  
+- SMB → share files across Windows networks  
+
+---
+
+## Why They Became Vulnerable
+
+### Core Problem
+
+These protocols were not designed with modern security in mind
+
+---
+
+### Main Reasons
+
+1. No Encryption  
+- FTP → credentials in clear text  
+- Telnet → data visible  
+
+2. Trusted Network Assumption  
+- NFS / SMB assume internal trusted environments  
+
+3. Over-Simplicity  
+- TFTP → no authentication  
+
+4. Environment Changed  
+
+Before:
+closed network  
+
+Today:
+open and hostile Internet  
+
+---
+
+## Key Security Concept
+
+Open port → exposed service → potential attack surface  
+
+---
+
+## Final Summary
+
+Port = entry point  
+Service = running program  
+Protocol = communication rules  
+Function = purpose  
+
+Created to solve a need  
+Can become exploitable if not secured  
+
+---
+
+## Mental Model
+
+More open ports  
+→ more exposed services  
+→ larger attack surface
+
+---
+
 ## Selected Ports
 
 This section will cover about 40 key ports.
