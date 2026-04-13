@@ -516,6 +516,10 @@ They allow:
 - Execution happens on the remote machine
 - Requires authentication (username and password)
 - More resource-intensive than SSH due to graphical interface
+- Creates a new, independent session on the remote system
+- Multiple users can have separate sessions on the same machine
+- The local user does not see the remote session activity
+
 
 ---
 
@@ -536,3 +540,32 @@ They allow:
 -
 
 ---
+
+## Port : 5900
+## Name : VNC (VIRTUAL NETWORK COMPUTING)
+
+### Definition
+- Protocol used to remotely access and control a system with a graphical interface
+- Allows sharing and interacting with the current user’s desktop
+
+### How it communicates
+- Uses TCP (port 5900)
+- Client connects to a system running a VNC server
+- Server sends the current screen to the client
+- Client sends mouse and keyboard input back to the server
+
+### How it can be attacked
+- Weak authentication: attacker can access the system if credentials are weak
+- Unauthorized access: exposed VNC services can be directly targeted
+- Session hijacking: attacker can take control of an active session
+- Lack of encryption: some VNC implementations do not encrypt traffic
+
+### Observation
+-
+
+### Notes
+- Shares the existing user session (not a new one)
+- User activity is visible to both parties in real time
+- Less secure by default compared to RDP
+- Commonly used for support and screen sharing
+- Unlike RDP, VNC does not create a separate session but mirrors the current user’s screen
