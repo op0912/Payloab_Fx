@@ -458,20 +458,32 @@ They allow:
 
 ---
 
-## Port : 23
+ ## Port : 23
 ## Name : TELNET
 
 ### Definition
-- 
+- Protocol used to remotely access and control a system
+- Does not provide encryption, making it insecure
 
 ### How it communicates
-- 
+- Uses TCP (port 23)
+- Establishes a direct connection between client and server
+- Sends all data in plain text (no encryption)
 
 ### How it can be attacked
-- 
+- Credential sniffing: attacker can capture usernames and passwords in plain text
+- Man-in-the-middle: attacker can intercept and modify communication
+- Unauthorized access: weak or exposed services can be accessed directly
 
 ### Observation
 -
+
+### Notes
+- Predecessor to SSH
+- Not secure due to lack of encryption
+- Uses authentication but transmits credentials in plain text
+- Rarely used in modern environments
+- Replaced by SSH in most cases
 
 
 ---
