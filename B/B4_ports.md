@@ -492,33 +492,30 @@ They allow:
 ## Name : RDP (REMOTE DESKTOP PROTOCOL)
 
 ### Definition
-- 
+- Protocol used to remotely access and control a system with a graphical interface
+- Allows full interaction with a remote desktop (mouse, keyboard, applications)
 
 ### How it communicates
-- 
+- Uses TCP (port 3389)
+- Client connects to a remote system running RDP service
+- Server sends graphical display data to the client
+- Client sends input (keyboard and mouse) back to the server
 
 ### How it can be attacked
-- 
+- Brute force: attacker tries multiple credentials to gain access
+- Credential reuse: attacker uses leaked login credentials
+- Unauthorized access: weak passwords or exposed services can be exploited
+- Misconfiguration: improper settings can expose the system
 
 ### Observation
 -
 
----
-
-## Port : 5900
-## Name : VNC (VIRTUAL NETWORK COMPUTING)
-
-### Definition
-- 
-
-### How it communicates
-- 
-
-### How it can be attacked
-- 
-
-### Observation
--
+### Notes
+- Mainly used in Windows environments
+- Provides full desktop access (not just terminal)
+- Execution happens on the remote machine
+- Requires authentication (username and password)
+- More resource-intensive than SSH due to graphical interface
 
 ---
 
