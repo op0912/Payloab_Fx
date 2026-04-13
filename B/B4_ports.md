@@ -324,7 +324,8 @@ They allow:
 - FTP requires a running service to respond
 - No service on port 21 means FTP is not available
 - FTP is not secure (credentials are sent in clear text)
-
+- FTPS (secure) control connection can use port 21 (explicit mode) or 990 (implicit mode)
+- Data connections are often dynamic (especially in passive mode), not always using port 20
 ---
 
 ## Port : 69  
