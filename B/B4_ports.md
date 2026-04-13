@@ -430,16 +430,30 @@ They allow:
 ## Name : SSH (SECURE SHELL)
 
 ### Definition
-- 
+- Protocol used to remotely access and control a system securely
+- Allows command execution on a remote machine
 
 ### How it communicates
-- 
+- Uses TCP (port 22)
+- Establishes a secure connection between client and server
+- Requires authentication (password or SSH key)
+- Allows sending commands and receiving output in real time
 
 ### How it can be attacked
-- 
+- Brute force: attacker tries many passwords to gain access
+- Credential reuse: attacker uses leaked credentials from other services
+- Misconfiguration: weak settings can allow unauthorized access
+- Key compromise: stolen SSH keys can grant direct access
+- Exposure: open SSH service can be targeted continuously
 
 ### Observation
 -
+
+### Notes
+- Provides encrypted remote access (unlike Telnet)
+- Mainly used on servers and Linux systems
+- Not commonly used by regular users
+- Requires a running service to accept connections
 
 ---
 
@@ -457,6 +471,7 @@ They allow:
 
 ### Observation
 -
+
 
 ---
 
