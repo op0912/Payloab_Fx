@@ -525,19 +525,42 @@ They allow:
 
 
 ## Port : 5985/5986
+- 5985 → HTTP (unencrypted)
+- 5986 → HTTPS (encrypted with TLS)
+
 ## Name : WinRM (WINDOWS REMOTE MANAGEMENT)
 
-### Definition
-- 
+### Description
+- WinRM is based on the WS-Management protocol over HTTP/HTTPS
+- A client sends HTTP/HTTPS requests containing PowerShell commands to the target machine.
+- The remote system executes the commands and returns the result through the same protocol.
+- It allows executing PowerShell commands on a remote machine without using a graphical interface.
 
 ### How it communicates
-- 
+- WinRM uses a layered communication model:
+- Transport layer: TCP
+- Application protocol:
+  - HTTP (port 5985)
+  - HTTPS (port 5986)
 
 ### How it can be attacked
-- 
+- Weak credentials:
+  If passwords are weak or reused, unauthorized access is possible
+- Exposed service:
+  If WinRM is accessible from the internet, it increases risk
+- Unencrypted communication:
+  Using HTTP (port 5985) can expose sensitive data
+- Misconfiguration:
+  Poor access control can allow unintended access
+- High privilege access:
+  If an admin account is compromised, full control of the system is possible
 
 ### Observation
 -
+
+### Notes 
+- WinRM does not use a custom protocol like SSH.
+- Instead, it uses HTTP/HTTPS as a transport mechanism to carry management commands.
 
 ---
 
