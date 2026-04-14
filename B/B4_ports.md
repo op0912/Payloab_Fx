@@ -592,3 +592,52 @@ They allow:
 - Less secure by default compared to RDP
 - Commonly used for support and screen sharing
 - Unlike RDP, VNC does not create a separate session but mirrors the current user’s screen
+
+## Email Services
+
+Ports in this section are related to sending, receiving, and managing emails between systems.
+
+They allow:
+- sending emails to remote mail servers
+- receiving and retrieving emails from a server
+- synchronizing mailboxes across multiple devices
+
+  ## Port : 25/587
+- 25 → SMTP (server-to-server, legacy)
+- 587 → SMTP (client submission, encrypted with TLS)
+
+## Name : SMTP (SIMPLE MAIL TRANSFER PROTOCOL)
+
+### Description
+- SMTP is used to send emails between systems
+- A client sends an email to an SMTP server
+- The SMTP server uses DNS (MX records) to find the destination mail server
+- The message is then transferred to the recipient’s mail server
+- It handles both client-to-server and server-to-server email delivery
+
+### How it communicates
+- SMTP uses a layered communication model:
+- Transport layer: TCP
+- Application protocol:
+  - SMTP (port 25 or 587)
+
+### How it can be attacked
+- Open relay:
+  Misconfigured servers may allow anyone to send emails through them
+- Spam abuse:
+  Attackers can use SMTP servers to send large amounts of spam
+- Credential attacks:
+  Weak or reused passwords can allow unauthorized access
+- Email spoofing:
+  Attackers can forge sender information in emails
+- Unencrypted communication:
+  Using port 25 without TLS can expose sensitive data
+
+### Observation
+-
+
+### Notes 
+- Port 25 is mainly used for server-to-server communication
+- Port 587 is used for client email submission (recommended)
+- SMTP does not handle email retrieval
+- SMTP relies on DNS (MX records) to locate destination mail servers
