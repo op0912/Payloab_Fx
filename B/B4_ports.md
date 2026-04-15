@@ -794,23 +794,48 @@ They allow:
 
 ---
 
-## Port : 
-## Name : 
+## Port : 67/68
+- 67 → DHCP (server)
+- 68 → DHCP (client)
 
-### Definition
-- 
+## Name : DHCP (DYNAMIC HOST CONFIGURATION PROTOCOL)
+
+### Description
+- DHCP is used to automatically assign network configuration to devices
+- A client requests an IP address and network settings from a DHCP server
+- The server provides configuration such as IP address, subnet mask, gateway, and DNS
+- It eliminates the need for manual network configuration
 
 ### How it communicates
-- 
+- DHCP uses a layered communication model:
+- Transport layer: UDP
+- Application protocol:
+  - DHCP (ports 67/68)
+
+- Communication follows the DORA process:
+  - Discover → client (68) → server (67)
+  - Offer → server (67) → client (68)
+  - Request → client (68) → server (67)
+  - Acknowledge → server (67) → client (68)
 
 ### How it can be attacked
-- 
+- Rogue DHCP:
+  A malicious server provides false network configuration
+- DHCP starvation:
+  Attackers exhaust the IP address pool to disrupt the network
+- Man-in-the-Middle:
+  Malicious configuration (gateway/DNS) can redirect traffic
+- Misconfiguration:
+  Incorrect settings can expose or disrupt network communication
 
 ### Observation
 -
 
-### Notes
--
+### Notes 
+- DHCP is required before most network communication (IP must be assigned first)
+- Uses UDP because the client does not yet have an IP address
+- Based on trust, which makes it vulnerable to attacks
+- Replaced BOOTP with dynamic and scalable configuration
 
 ---
 
