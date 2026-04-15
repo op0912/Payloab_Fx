@@ -738,3 +738,96 @@ They allow:
 - Suitable for multi-device usage (phone, laptop, web)
 - Considered the modern standard for email retrieval
 - IMAP uses a direct client-to-server communication model (no HTTP or additional protocols) 
+
+---
+
+## Core Network Services
+
+Ports in this section are related to the fundamental services that allow a network to function properly.
+
+They allow:
+
+- resolving domain names to IP addresses
+- automatically assigning network configuration to devices
+- synchronizing time across systems
+
+---
+
+## Port : 53
+- 53 → DNS (UDP/TCP)
+
+## Name : DNS (DOMAIN NAME SYSTEM)
+
+### Description
+- DNS is used to resolve domain names into IP addresses
+- A client sends a request to a DNS server to find the IP address of a domain
+- The DNS server responds with the corresponding IP address
+- It allows users to access services using human-readable names instead of IP addresses
+
+### How it communicates
+- DNS uses a layered communication model:
+- Transport layer:
+  - UDP (port 53) for most queries (fast)
+  - TCP (port 53) for large responses and zone transfers
+- Application protocol:
+  - DNS
+
+### How it can be attacked
+- DNS spoofing:
+  Attackers can provide false IP addresses to redirect traffic
+- Cache poisoning:
+  Malicious responses can be stored in DNS cache
+- Amplification attacks:
+  DNS can be abused for DDoS using UDP
+- Misconfiguration:
+  Incorrect DNS setup can expose internal infrastructure
+
+### Observation
+-
+
+### Notes 
+- DNS is required before most network communications (HTTP, SMTP, etc.)
+- Resolves domain names to IP addresses (name → IP)
+- Does not transmit application data, only resolution information
+- Uses UDP for speed and TCP for reliability when needed
+- Without DNS, users would need to remember IP addresses instead of domain names
+
+---
+
+## Port : 
+## Name : 
+
+### Definition
+- 
+
+### How it communicates
+- 
+
+### How it can be attacked
+- 
+
+### Observation
+-
+
+### Notes
+-
+
+---
+
+## Port : 
+## Name : 
+
+### Definition
+- 
+
+### How it communicates
+- 
+
+### How it can be attacked
+- 
+
+### Observation
+-
+
+### Notes
+-
