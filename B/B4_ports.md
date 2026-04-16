@@ -885,3 +885,68 @@ They allow:
 - Uses UDP for fast communication with minimal overhead
 - Time synchronization is required before many secure operations
 - Works in a distributed hierarchy to ensure scalability and reliability
+
+---
+
+## Web Services
+
+Ports in this section are related to web communication between clients and servers.
+
+They allow:
+- accessing websites and web applications
+- exchanging requests and responses over the web
+- delivering web content securely or insecurely
+- HTTP and HTTPS are application layer protocols, not services themselves
+- They define how communication happens between a client and a web server
+- Web services (e.g. websites, APIs, applications) use HTTP/HTTPS to operate
+- Examples include platforms like Google, Facebook, or any web-based application
+
+---
+
+## Port : 80 / 8080
+- 80 → HTTP (default)
+- 8080 → HTTP (alternative)
+
+## Name : HTTP (HYPERTEXT TRANSFER PROTOCOL)
+
+### Description
+- HTTP is an application layer protocol used for communication between clients and web servers
+- A client sends a request to a server, and the server responds with the requested resource
+- It is the foundation of data exchange on the web (websites, APIs, applications)
+- HTTP is stateless, meaning each request is independent
+
+### How it communicates
+- HTTP uses a request/response model:
+  - client → sends request
+  - server → sends response
+
+- Transport layer:
+  - TCP
+
+- Common structure of an HTTP request:
+  - Method (e.g. GET, POST)
+  - Headers (metadata)
+  - Body (data, optional)
+
+- Example:
+  GET /index.html HTTP/1.1
+  Host: example.com
+
+### How it can be attacked
+- Man-in-the-Middle (MITM):
+  Traffic is not encrypted and can be intercepted
+- Request manipulation:
+  Attackers can modify headers, parameters, or methods
+- Injection attacks:
+  Malicious input can be sent through HTTP requests (e.g. SQL injection)
+- Session hijacking:
+  Tokens or session data can be captured if not protected
+
+### Observation
+-
+
+### Notes 
+- HTTP is not encrypted, making it insecure for sensitive data
+- Although it uses port 80 by default, it can run on alternative ports (e.g. 8080)
+- HTTP is widely used for web applications and APIs
+- HTTPS is the secure version of HTTP using encryption (TLS)
