@@ -839,20 +839,49 @@ They allow:
 
 ---
 
-## Port : 
-## Name : 
+## Port : 123
+- 123 → NTP (UDP)
 
-### Definition
-- 
+## Name : NTP (NETWORK TIME PROTOCOL)
+
+### Description
+- NTP is used to synchronize the time across systems on a network
+- A client requests the current time from an NTP server
+- The server responds with a reference time which the client uses to adjust its clock
+- It ensures consistent time across all devices
 
 ### How it communicates
-- 
+- NTP uses a layered communication model:
+- Transport layer: UDP
+- Application protocol:
+  - NTP (port 123)
+
+- Communication process:
+  - client sends a time request to the server
+  - server responds with its current time
+  - client calculates network delay (latency)
+  - client adjusts its clock accordingly (slewing)
+
+- NTP uses a hierarchical structure:
+  - Stratum 0 → reference clocks (atomic clocks, GPS)
+  - Stratum 1 → servers directly connected to Stratum 0
+  - Stratum 2+ → servers synchronized from other NTP servers
 
 ### How it can be attacked
-- 
+- NTP amplification:
+  Attackers use NTP servers to generate large amounts of traffic (DDoS)
+- Time manipulation:
+  Malicious servers can provide incorrect time
+- Misconfiguration:
+  Incorrect time sources can lead to system desynchronization
+- Man-in-the-Middle:
+  Attackers can alter time responses in transit
 
 ### Observation
 -
 
-### Notes
--
+### Notes 
+- NTP is critical for authentication, logging, and certificate validation
+- Uses UDP for fast communication with minimal overhead
+- Time synchronization is required before many secure operations
+- Works in a distributed hierarchy to ensure scalability and reliability
