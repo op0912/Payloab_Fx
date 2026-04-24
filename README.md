@@ -38,6 +38,13 @@ Content is organized into progressive learning blocks (B → L), each representi
 
 ---
 
+## Practice Approach
+Practical observations are integrated directly into each block using real tools.
+
+Hands-on lab exercises are documented separately to maintain a clear distinction between structured knowledge and applied practice.
+
+---
+
 ## Note
 This is an evolving repository that reflects my progression from foundational knowledge to advanced offensive capabilities.
 
