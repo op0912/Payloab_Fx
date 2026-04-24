@@ -1,4 +1,4 @@
-# A4 — First Operational Notes (Day 1)
+# A — First Operational Notes (Day 1)
 
 ## Actions
 - Created repository Payloab_Fx
