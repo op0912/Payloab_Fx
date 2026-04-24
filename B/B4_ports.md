@@ -597,6 +597,8 @@ They allow:
 - Commonly used for support and screen sharing
 - Unlike RDP, VNC does not create a separate session but mirrors the current user’s screen
 
+---
+
 ## Email Services
 
 Ports in this section are related to sending, receiving, and managing emails between systems.
@@ -605,6 +607,8 @@ They allow:
 - sending emails to remote mail servers
 - receiving and retrieving emails from a server
 - synchronizing mailboxes across multiple devices
+
+---
 
   ## Port : 25/587
 - 25 → SMTP (server-to-server, legacy)
