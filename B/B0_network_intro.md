@@ -1,4 +1,4 @@
-# BLOC B — Network Basics
+# BLOC B — Network introduction
 
 ## Context
 This is my first networking block.
