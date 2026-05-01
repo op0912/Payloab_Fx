@@ -20,6 +20,7 @@ These services are commonly used in enterprise environments to maintain visibili
 - SNMP is a network protocol used to monitor and manage devices remotely
 - It allows a system (manager) to request information from another system (agent)
 - Commonly used to retrieve system data such as CPU usage, memory, network traffic, and device status
+- SNMP uses OIDs (Object Identifiers) and MIBs to structure and access data
 
 ### How it communicates
 - Uses UDP for lightweight and fast communication
@@ -44,6 +45,9 @@ These services are commonly used in enterprise environments to maintain visibili
   - Disable interfaces
   - Reboot device
 - Used for reconnaissance and pivoting inside a network
+- Enumeration:
+  - attacker can query SNMP to extract detailed system information
+  - used to map the network and identify targets
 
 ### Observation
 -
@@ -52,8 +56,10 @@ These services are commonly used in enterprise environments to maintain visibili
 - SNMP does not provide full system control (unlike SSH)
 - Port 161 is active (interaction), port 162 is passive (alerts)
 - Common on routers, switches, servers, and printers
-- SNMPv1/v2 are insecure (no encryption)
-- SNMPv3 adds authentication and encryption
+- SNMPv1/v2:
+  - use community strings (clear text, weak security)
+- SNMPv3:
+  - supports authentication and encryption
 
 ---
 
