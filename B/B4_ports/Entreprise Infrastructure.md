@@ -51,9 +51,56 @@ Services covered here are heavily related to:
 - LDAP is mainly used to retrieve information from a directory.
 - Active Directory stores the information.
 - LDAP is used to access and query that information.
-- Port 389 = standard LDAP.
+- *Port 389 = standard LDAP.*
+- *Port 636 = encrypted LDAP (LDAPS).*
 
 ---
-- Port 636 = encrypted LDAP (LDAPS).
+
+## Port :
+88
+
+## Name :
+Kerberos
+
+### Definition
+- Kerberos is a network authentication protocol mainly used in Active Directory environments.
+- It is designed to authenticate users and services securely within a domain.
+- Kerberos uses tickets distributed by the KDC (Key Distribution Center) instead of constantly sending passwords across the network.
+- It is one of the main authentication systems used in modern Windows enterprise infrastructures.
+
+### How it communicates
+- Kerberos mainly uses a client → KDC → service communication model.
+- A user first authenticates to the KDC.
+- The KDC verifies the identity and distributes authentication tickets.
+- The user then uses these tickets to access authorized services without repeatedly re-entering credentials.
+- Kerberos mainly runs over TCP/UDP 88.
+- In Active Directory environments, the KDC is commonly integrated into the Domain Controller.
+
+### How it can be attacked
+- Kerberos tickets may become valuable targets if stolen by attackers.
+- Misconfigured permissions and excessive privileges may increase security risks in enterprise environments.
+- Compromised accounts may allow attackers to access additional services inside a domain.
+
+### Observation
+- No direct Kerberos observation performed yet.
+- Current understanding is based on conceptual analysis of Active Directory authentication workflows and enterprise infrastructure behavior.
+
+### Notes
+- Kerberos is heavily related to Active Directory enterprise authentication workflows.
+- Kerberos works closely with:
+  - Active Directory
+  - LDAP
+  - Domain Controllers
+  - Single Sign-On (SSO)
+- Kerberos mainly handles authentication, while permissions and access control are generally managed through groups, ACLs, and Active Directory policies.
+- The KDC (Key Distribution Center) verifies identities and distributes tickets.
+- Kerberos tickets allow users to access services without constantly resending passwords.
+- Authentication = verifying identity.
+- Authorization = determining what the authenticated user is allowed to access.
+- A Domain Controller commonly hosts:
+  - Active Directory
+  - Kerberos KDC
+  - LDAP
+  - DNS services
 
 ---
