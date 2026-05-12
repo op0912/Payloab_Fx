@@ -56,11 +56,11 @@ Services covered here are heavily related to:
 
 ---
 
-## Port :
-88
+## Port : 88
 
-## Name :
-Kerberos
+
+## Name : Kerberos
+
 
 ### Definition
 - Kerberos is a network authentication protocol mainly used in Active Directory environments.
