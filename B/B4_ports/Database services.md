@@ -67,7 +67,32 @@ Example SQL query:
 ```sql
 SELECT * FROM users;
 ```
+- Common SQL syntax is generally similar across most relational database systems.
 
+Common SQL commands:
+```sql
+SELECT * FROM users;
+```
+- Reads and retrieves data from a table.
+
+```sql
+INSERT INTO users VALUES (...);
+```
+- Inserts new data into a table.
+
+```sql
+UPDATE users SET name='John';
+```
+- Modifies existing data inside a table.
+
+```sql
+DELETE FROM users;
+```
+- Deletes data from a table.
+
+- SQL syntax may slightly vary depending on the DBMS used.
+- Most relational database systems share common SQL concepts, but vendors often implement their own features, functions, and syntax variations.
+- Different database systems evolved separately over time and developed their own enterprise-specific implementations.
 This query requests all data from the users table.
 
 SQL is heavily used in:
