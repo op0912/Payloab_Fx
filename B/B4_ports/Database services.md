@@ -174,3 +174,76 @@ Oracle Database
 - Oracle communication relies on TCP sessions between client systems and the Oracle server.
 
 ---
+
+## Port :
+1433/TCP
+
+## Name :
+Microsoft SQL Server (MSSQL) / TDS
+
+### Definition
+- Microsoft SQL Server (MSSQL) is a relational Database Management System (DBMS) developed by Microsoft.
+- It is mainly used to store, organize, manage, and process structured enterprise data.
+- MSSQL is heavily associated with:
+  - Windows Server environments
+  - Active Directory infrastructures
+  - Microsoft enterprise ecosystems
+  - business and corporate infrastructures
+- MSSQL mainly uses the TDS (Tabular Data Stream) protocol for database communication.
+- Port 1433/TCP is commonly associated with MSSQL services.
+
+### How it communicates
+- MSSQL mainly uses a client ↔ server communication model.
+- Applications, users, or backend systems send SQL queries toward the MSSQL server.
+- MSSQL commonly communicates over TCP 1433.
+- The TDS protocol is mainly used to transport:
+  - SQL queries
+  - database responses
+  - authentication data
+  - database communication traffic
+- Client systems usually use dynamic source ports when connecting to the MSSQL server.
+- MSSQL communication commonly follows this simplified flow:
+
+```text
+Client/Application
+↓
+TDS protocol
+↓
+TCP connection (1433)
+↓
+MSSQL Server
+```
+
+- Modern MSSQL environments may use TLS encryption to secure database communications.
+
+### How it can be attacked
+- Exposed MSSQL services may become high-value enterprise targets.
+- Weak credentials may lead to unauthorized database access.
+- Misconfigured MSSQL environments may expose sensitive corporate information.
+- Older MSSQL systems may contain vulnerabilities or outdated configurations.
+- Attackers may attempt:
+  - enumeration
+  - credential attacks
+  - database exploitation
+  - privilege escalation
+- Publicly exposed database services significantly increase attack surface.
+
+### Observation
+- No direct MSSQL interaction performed yet.
+- Current understanding is based on:
+  - SQL/database concepts
+  - Microsoft enterprise infrastructure research
+  - network communication analysis
+  - MSSQL client ↔ server communication logic
+
+### Notes
+- DBMS = Database Management System.
+- MSSQL is a relational database system developed by Microsoft.
+- MSSQL and Oracle generally serve similar enterprise database purposes but use different architectures and communication protocols.
+- MSSQL mainly uses the TDS (Tabular Data Stream) protocol for database communications.
+- TCP 1433 is mainly associated with MSSQL services.
+- MSSQL is heavily integrated into Microsoft enterprise infrastructures and Windows-based environments.
+- Modern MSSQL systems may use TLS encryption to secure communications between clients and the database server.
+- MSSQL remains heavily used today in enterprise and corporate environments.
+
+---
