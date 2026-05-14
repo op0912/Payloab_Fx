@@ -175,11 +175,9 @@ Oracle Database
 
 ---
 
-## Port :
-1433/TCP
+## Port : 1433/TCP
 
-## Name :
-Microsoft SQL Server (MSSQL) / TDS
+## Name : Microsoft SQL Server (MSSQL) / TDS
 
 ### Definition
 - Microsoft SQL Server (MSSQL) is a relational Database Management System (DBMS) developed by Microsoft.
@@ -237,7 +235,6 @@ MSSQL Server
   - MSSQL client ↔ server communication logic
 
 ### Notes
-- DBMS = Database Management System.
 - MSSQL is a relational database system developed by Microsoft.
 - MSSQL and Oracle generally serve similar enterprise database purposes but use different architectures and communication protocols.
 - MSSQL mainly uses the TDS (Tabular Data Stream) protocol for database communications.
@@ -245,5 +242,90 @@ MSSQL Server
 - MSSQL is heavily integrated into Microsoft enterprise infrastructures and Windows-based environments.
 - Modern MSSQL systems may use TLS encryption to secure communications between clients and the database server.
 - MSSQL remains heavily used today in enterprise and corporate environments.
+
+---
+
+## Port : 3306/TCP
+
+## Name : MySQL / MySQL Protocol
+
+### Definition
+- MySQL is a relational Database Management System (DBMS).
+- It is mainly used to store, organize, manage, and process structured data.
+- MySQL became heavily associated with:
+  - web applications
+  - web hosting
+  - backend infrastructures
+  - CMS platforms
+  - Internet services
+- MySQL became extremely popular during the growth of the modern web because it was lightweight, accessible, and developer-friendly compared to heavier enterprise database systems.
+- MySQL is strongly associated with the historical LAMP stack:
+  - Linux
+  - Apache
+  - MySQL
+  - PHP
+
+### How it communicates
+- MySQL mainly uses a client ↔ server communication model.
+- Applications, backend systems, or users send SQL queries toward the MySQL server.
+- MySQL commonly communicates over TCP 3306.
+- MySQL mainly uses the MySQL protocol for database communications.
+- The MySQL protocol is mainly used to transport:
+  - SQL queries
+  - authentication data
+  - database responses
+  - database communication traffic
+- Client systems usually use dynamic source ports when connecting to the MySQL server.
+- MySQL communication commonly follows this simplified flow:
+
+```text
+User
+↓
+Website / Backend
+↓
+SQL query
+↓
+MySQL protocol
+↓
+TCP connection (3306)
+↓
+MySQL Server
+```
+
+- Modern MySQL environments may use TLS encryption to secure communications.
+
+### How it can be attacked
+- Exposed MySQL services may become high-value web infrastructure targets.
+- Weak credentials may lead to unauthorized database access.
+- Misconfigured MySQL environments may expose sensitive backend data.
+- Older MySQL systems may contain vulnerabilities or outdated configurations.
+- Attackers may attempt:
+  - enumeration
+  - credential attacks
+  - SQL injection related attacks
+  - database exploitation
+  - privilege escalation
+- Publicly exposed database services significantly increase attack surface.
+
+### Observation
+- No direct MySQL interaction performed yet.
+- Current understanding is based on:
+  - web infrastructure concepts
+  - SQL/database concepts
+  - backend communication logic
+  - client ↔ server database communication analysis
+
+### Notes
+- MySQL is a relational database system strongly associated with web infrastructures and backend applications.
+- MySQL mainly uses the MySQL protocol for database communications.
+- TCP 3306 is mainly associated with MySQL services.
+- MySQL became extremely popular during the expansion of the Internet and dynamic web applications.
+- MySQL is commonly associated with:
+  - PHP
+  - CMS platforms
+  - web hosting
+  - backend web infrastructures
+- Modern MySQL systems may use TLS encryption to secure database communications.
+- MySQL remains one of the most widely used relational database systems today.
 
 ---
