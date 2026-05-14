@@ -79,3 +79,73 @@ SQL is heavily used in:
 - backend services
 
 ---
+
+## Port : 1521/TCP
+
+## Name : Oracle Database / Oracle TNS Listener
+
+### Definition
+- Oracle is a relational Database Management System (DBMS) developed by Oracle Corporation.
+- It is mainly used to store, organize, manage, and process structured enterprise data.
+- Oracle databases are heavily used in:
+  - enterprise infrastructures
+  - banks
+  - governments
+  - financial systems
+  - large corporate environments
+- Port 1521/TCP is commonly associated with the Oracle TNS Listener service.
+
+### How it communicates
+- Oracle mainly uses a client ↔ server communication model.
+- Applications, users, or backend systems send SQL queries toward the Oracle database server.
+- Oracle commonly communicates over TCP 1521.
+- The Oracle TNS Listener listens for incoming Oracle client connections and redirects them toward the correct database instance.
+- Client systems usually use dynamic source ports when connecting to the Oracle server.
+- Oracle communication commonly follows this simplified flow:
+
+```text
+Client/Application
+↓
+TCP connection
+↓
+Oracle TNS Listener (1521)
+↓
+Oracle Database
+```
+
+- SQL queries and database responses are transmitted through the established TCP connection.
+
+### How it can be attacked
+- Exposed Oracle databases may become high-value enterprise targets.
+- Weak credentials may lead to unauthorized database access.
+- Older Oracle systems may contain vulnerabilities or outdated configurations.
+- Misconfigured databases may expose sensitive enterprise information.
+- Attackers may attempt:
+  - enumeration
+  - credential attacks
+  - database exploitation
+  - privilege escalation
+- Publicly exposed database services increase attack surface significantly.
+
+### Observation
+- No direct Oracle database interaction performed yet.
+- Current understanding is based on:
+  - network communication analysis
+  - SQL/database concepts
+  - enterprise infrastructure research
+  - Oracle client ↔ server communication logic
+
+### Notes
+- DBMS = Database Management System.
+- Oracle is a relational database system heavily associated with enterprise infrastructures.
+- Oracle still remains widely used today in:
+  - banks
+  - governments
+  - large corporations
+  - critical infrastructures
+- Oracle is often associated with older enterprise environments, but modern Oracle systems are still actively maintained and secured.
+- TCP 1521 mainly represents the Oracle TNS Listener service.
+- The TNS Listener listens for incoming Oracle client connections and redirects them toward the database service.
+- Oracle communication relies on TCP sessions between client systems and the Oracle server.
+
+---
