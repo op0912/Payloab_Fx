@@ -328,4 +328,91 @@ MySQL Server
 - Modern MySQL systems may use TLS encryption to secure database communications.
 - MySQL remains one of the most widely used relational database systems today.
 
+
+---
+
+## Port :
+5432/TCP
+
+## Name :
+PostgreSQL / PostgreSQL Protocol
+
+### Definition
+- PostgreSQL is a relational Database Management System (DBMS).
+- It is an open-source database system mainly developed and maintained by the PostgreSQL Global Development Group.
+- PostgreSQL originated from academic and university research environments.
+- PostgreSQL is heavily known for:
+  - stability
+  - robustness
+  - technical rigor
+  - SQL standards compliance
+  - advanced database capabilities
+- PostgreSQL is heavily used in:
+  - backend infrastructures
+  - Linux environments
+  - cloud infrastructures
+  - DevOps environments
+  - modern web applications
+  - enterprise backend systems
+
+### How it communicates
+- PostgreSQL mainly uses a client ↔ server communication model.
+- Applications, backend systems, or users send SQL queries toward the PostgreSQL server.
+- PostgreSQL commonly communicates over TCP 5432.
+- PostgreSQL mainly uses the PostgreSQL protocol for database communications.
+- The PostgreSQL protocol is mainly used to transport:
+  - SQL queries
+  - authentication data
+  - database responses
+  - database communication traffic
+- Client systems usually use dynamic source ports when connecting to the PostgreSQL server.
+- PostgreSQL communication commonly follows this simplified flow:
+
+```text
+Client/Application
+↓
+PostgreSQL protocol
+↓
+TCP connection (5432)
+↓
+PostgreSQL Server
+```
+
+- Modern PostgreSQL environments may use TLS encryption to secure communications.
+
+### How it can be attacked
+- Exposed PostgreSQL services may become high-value backend infrastructure targets.
+- Weak credentials may lead to unauthorized database access.
+- Misconfigured PostgreSQL environments may expose sensitive backend data.
+- Older PostgreSQL systems may contain vulnerabilities or outdated configurations.
+- Attackers may attempt:
+  - enumeration
+  - credential attacks
+  - database exploitation
+  - privilege escalation
+- Publicly exposed database services significantly increase attack surface.
+
+### Observation
+- No direct PostgreSQL interaction performed yet.
+- Current understanding is based on:
+  - SQL/database concepts
+  - backend infrastructure research
+  - client ↔ server communication analysis
+  - PostgreSQL architecture and ecosystem concepts
+
+### Notes
+- DBMS = Database Management System.
+- PostgreSQL is an open-source relational database system.
+- PostgreSQL is heavily associated with:
+  - Linux infrastructures
+  - cloud environments
+  - DevOps ecosystems
+  - backend modern web infrastructures
+- PostgreSQL originated from university and academic research environments.
+- PostgreSQL is widely recognized for technical rigor, robustness, and standards compliance.
+- PostgreSQL mainly uses the PostgreSQL protocol for database communications.
+- TCP 5432 is mainly associated with PostgreSQL services.
+- Modern PostgreSQL systems may use TLS encryption to secure database communications.
+- PostgreSQL remains one of the most respected and widely used relational database systems today.
+
 ---
