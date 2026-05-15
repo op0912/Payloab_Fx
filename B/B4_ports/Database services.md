@@ -331,11 +331,9 @@ MySQL Server
 
 ---
 
-## Port :
-5432/TCP
+## Port : 5432/TCP
 
-## Name :
-PostgreSQL / PostgreSQL Protocol
+## Name : PostgreSQL / PostgreSQL Protocol
 
 ### Definition
 - PostgreSQL is a relational Database Management System (DBMS).
@@ -401,7 +399,6 @@ PostgreSQL Server
   - PostgreSQL architecture and ecosystem concepts
 
 ### Notes
-- DBMS = Database Management System.
 - PostgreSQL is an open-source relational database system.
 - PostgreSQL is heavily associated with:
   - Linux infrastructures
